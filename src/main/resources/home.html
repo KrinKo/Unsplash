@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Unsplash</title>
+    <title>Beautiful Free Images & Pictures | Unsplash</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="bootstrap3/css/bt3.css">
     <link rel="stylesheet" type="text/css" href="bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
     <style>
-        header{
+        header{/*加阴影*/
             box-shadow: 0px 3px 14px 0 #aaa;
             height: 130px;
         }
@@ -20,7 +20,7 @@
             background-color: #f5f5f5;
             padding: 10px 20px;
             height: 40px;
-            width: 470px;
+            width: 1100px;
             border-radius: 25px;
             border: none;
             position: relative;
@@ -28,7 +28,7 @@
             outline: none;/*去掉点击后的边框*/
             margin-left: -20px;
         }
-        form>button{
+        form>button{/*放大镜搜索按钮*/
             background-color: rgba(0,0,0, 0);
             border: 0;
             color: gray;
@@ -36,10 +36,10 @@
             top: 20px;
             right: 40px;
         }
-        .home{
+        .home{/*顶部home栏*/
             top: 15px;
         }
-        .submit{
+        .submit{/*submit按钮*/
             top: 8px;
         }
         h2{
@@ -54,16 +54,21 @@
         }
         #search{
             position: absolute;
-            top: 100px;
-            text-align: center;
+            top: 200px;
+            left: 450px;
 
         }
-        img{
+        #search>form>input{
+            border-radius: 5px;
+            left: 20px;
+            width: 1000px;
+        }
+        img{/*图片浮动效果*/
             cursor: pointer;
             transition: all 0.6s;
 
         }
-        img:hover{
+        img:hover{/*鼠标移入图片浮动*/
             transform: scale(1.1);
             position:relative;
             z-index:100;
@@ -73,6 +78,7 @@
 </head>
 <body>
 <!--顶部导航条-->
+
 <header class="col-md-12">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -80,7 +86,7 @@
                 <ul class="nav navbar-nav underline" >
                     <li>
                         <a href="home" class="navbar-brand">
-                            <img src="images/UnsplashLogo.jpg" alt="" width="180px">
+                            <img src="images/UnsplashLogo.png" alt="" width="180px">
                         </a>
                     </li>
                     <li>
@@ -116,6 +122,15 @@
                             <button type="button" class="btn btn-success">Join free</button>
                         </a>
                     </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav underline" >
                     <!--分类列表-->
                     <li>
                         <a href=""><p>Editorial</p></a>
@@ -159,11 +174,35 @@
                     <li>
                         <a href=""><p>View all</p></a>
                     </li>
+                    <li>
+                        <a href=""><p>Interiors</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>Travel</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>Technology</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>Textures & Patterns
+                        </p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>Animal</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>Athletics</p></a>
+                    </li>
+                    <li>
+                        <a href=""><p>View all</p></a>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+
 <section class="col-md-12">
 
 <!--轮播图-->
@@ -200,7 +239,15 @@
     </a>
 </div>
     <div class="col-lg-12" id = search>
-        <h1>哈哈哈</h1>
+        <h1 style="color: white">Unsplash</h1>
+        <p style="font-size: 16px">The internet’s source of freely-usable images.</p>
+        <p style="font-size: 16px">Powered by creators everywhere.</p>
+        <form action="home">
+            <input type="text" placeholder="Search free high-resolution photos" name="keyword">
+            <button type="button">
+                <span class="fa fa-search" ></span>
+            </button>
+        </form>
     </div>
 </section>
 
@@ -218,6 +265,8 @@
 <script src="js/imagesloaded.pkgd.js"></script>
 
 <script>
+    /*轮播图开始移动*/
+    $("#myCarousel").carousel("cycle");
     $("input:first").hover(function () {//鼠标移入
         $(this).css("border","1px solid #DCDCDC");
     },function () {
