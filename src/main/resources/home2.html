@@ -118,9 +118,7 @@
         #search > form > input {
             height: 55px;
         }
-        .grid-item{
-            cursor: url("../images/magnifie.png"),auto;
-        }
+
     </style>
 </head>
 <body>
@@ -397,12 +395,13 @@
     /*轮播图开始移动*/
     $("#myCarousel").carousel("cycle");
     /*搜索框加边框*/
+
+
     $("input:first").hover(function () {//鼠标移入
         $(this).css("border", "1px solid #DCDCDC");
     }, function () {
         $(this).css("border", "none");
     })
-
     $("input:last").hover(function () {//鼠标移入
         $(this).css("border", "5px solid #DCDCDC");
     }, function () {
@@ -457,6 +456,7 @@
             $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg
         });
         $(innerdiv).click(function () {//再次点击淡出消失弹出层
+            /*$(this).fadeOut("fast");*/
             $(outerdiv).fadeOut("fast");
         });
     }
